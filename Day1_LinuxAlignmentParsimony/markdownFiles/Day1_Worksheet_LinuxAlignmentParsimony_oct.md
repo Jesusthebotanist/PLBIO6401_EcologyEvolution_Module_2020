@@ -260,7 +260,7 @@ A final note. If you rerun the above code it will overwrite any files that exist
 We have just ran our first analysis on a server! Now we typically need to download the output and analyze the result. Using Cyberduck download the entire folder 'My_first_Parsimony_Analysis'. You should now have a .nex file in your folder. This .nex file contains the phylogeny you just inferred and can be viewed in a tree viewer program, 'FigTree'
 
 1. Open Figtree
-2. Open ruhf_32_parsimony.nex in FigTree, it should propt you to name somthing. Name it 'Bootstrap'. Once you have a phylogeny should appear
+2. Open ruhf_32_parsimony.nex in FigTree, it should prompt you to name somthing. Name it 'Bootstrap'. Once you have a phylogeny should appear
 3. Click the drop down arrow on 'Node Labels' on the left hand tool bar. Then click on the drop down arrow for 'Display:' you should see 'Bootstrap' click on that. 
 4. Ta-da! You have infered a phylogeny of land plants! Not to hard I hope?
 
@@ -290,8 +290,8 @@ pandoc Day1_Worksheet_LinuxAlignmentParsimony_oct.md \
 -V toc-title:"Table of Contents" \
 -V linkcolor:blue \
 -M title="Day 1: Linux, Alignment and Parsimony" \
--M author="Jesus Martinez-Gomez" \
--M date="October 19th, 2020" \
+-M author="Jesus Martinez-Gomez & Eugenio Valderrama" \
+-M date="October 20th, 2020" \
 -M abstract="This worksheet will walk you through some \
 Linux basics, alignment and parsimony tree inference. \
 These are are step-by-step instruction intended for \
