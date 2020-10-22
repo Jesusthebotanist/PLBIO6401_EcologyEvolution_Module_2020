@@ -26,6 +26,7 @@ Now that we have updated our file, we'll find a new folder 'Day2_MLBayes'. This 
 
 Lets make two directories for our Likelihood and Bayesian analysis. 
 ```bash
+mkdir Day2_MLBayes/ML
 mkdir Day2_MLBayes/MLbootstrap
 mkdir Day2_MLBayes/Bayes
 ```
@@ -80,9 +81,9 @@ cd MLbootstrap
 
 raxmlHPC \
 -f a \
--s petN_aligned.fst \
+-s ruhf_32_by_5000_aligned.fas \
 -m GTRGAMMA \
--o Spirodela_polyrhiza \
+-o Pedinomonas_minor \
 -p $RANDOM \
 -N 100 \
 -n ruhf_32_by_5000.phy \
