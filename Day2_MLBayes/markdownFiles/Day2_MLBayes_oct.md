@@ -110,7 +110,7 @@ MrBayes is more similar to TNT than RAxML, in the sense that when you run MrBaye
 First 'cd' to the Bayes directory, where you've uploaded the .nexus file.Notice I use '../..' this means go up two prior folder instead of one. You can include '..' in a relative path. 
 ```bash
 cd ../..
-bash
+mb
 ```
 
 Read in the data
