@@ -73,16 +73,16 @@ As we discussed in lecture an important part of phylogenetics is to gain a sense
 
 * -f this specifies the type of bootstrap approach. We will use 'a' which is rapid Bootstrap
 * -x Random seed for rapid Bootstrap
-* -N the nubasher of bootstraps
+* -N the number of bootstraps
 ```bash
 cd ..
 cd MLbootstrap
 
 raxmlHPC \
 -f a \
--s ruhf_32_by_5000_aligned.fas \
+-s petN_aligned.fst \
 -m GTRGAMMA \
--o Pedinomonas_minor \
+-o Spirodela_polyrhiza \
 -p $RANDOM \
 -N 100 \
 -n ruhf_32_by_5000.phy \
@@ -210,7 +210,7 @@ First step is to upload data to CIPRES .
 3. It'll automatically transfer you to the "Select Tool" sheet, (if not click on it). Here you can select the different programs available. There are a couple version of RAxML, we'll be using "RAxML-HPC v.8 on XSEDE"
 4. Click "Set Parameters", here we will specify all the parameters we had to type in using flags. Notice, there is a short explanation of what the parameter is followed by a flag "-", this is the corresponding argument in RAxML. We'll be running the exact same bootstrap analysis we ran on our servers, below are the instruction for specifying the flags. **Note** Make sure to click on "Advance Parameter" to show more.
 
-* In CIPRES you need to specify the computing time our analysis is small so we will use the default ".25"
+* In CIPRES you need to specify the computing time our analysis is small so we will use the default ".25" (*Note:* You will need to change this value in the homework)
 * -n change to ruhf_32_by_5000_CIPRES.phy
 * -o Type in "Pedinomonas_minor"
 * -p Make sure this box is clicked
@@ -264,12 +264,17 @@ These are essentially all the instruction you typed in the MrBayes tutorial abov
 Once your job is finished download the entire output folder. Look at the model parameters in Tracer and compare it to you MrBayes run. 
 
 # Homework
-Answer the following questions. Send your answer to the questions in a word document or text file. For question 2 and question 3, choose a gene from the "Ruhfel_unaligned_fasta" folder and send the phylogenies (four phylogenies total of the same gene). 
-**Important note:** Some of the genes in the folder are quite large and may take some time to run on the server. In order for the run to complete you will need to have a stable Internet connection and your computer cannot got to sleep. This is very inconvenient and there are way around this which we have not taught you, so we recommend you choose on of the following genes: petN, petL, psal, psbl, psbM, PsbT, rpl32, petG, rpl36. If you do run into this issue or would like to learn how to circumvent shoot us an email and we'll teach you. 
+Answer the following questions. Send your answer to the questions in a word document or text file. For question 2 and question 3, choose a gene from the "Ruhfel_unaligned_fasta" folder and send the phylogenies (four phylogenies total), please use the same gene. We recommend you use the same gene from homework 1 it should already be aligned. 
 
+**Important note:** 
+* In question 2 and 3, you will need to specify a different species as an out group, than the one in the examples above "Pedinomonas_minor", to root the phylogeny. Pick any species in your dataset as the root, does not matter. You'll need to open the file in a text editor find a species in your dataset. 
+* Some of the genes in the folder are quite large and may take some time to run on the server. In order for the run to complete you will need to have a stable Internet connection and your computer cannot got to sleep. This is very inconvenient and there are way around this which we have not taught you, so we recommend you choose on of the following genes: petN, petL, psal, psbl, psbM, PsbT, rpl32, petG, rpl36. However, if you do run into this issue or are an adventure shoot us an email and we can teach you how to do it. 
+
+**Questions:** 
 1. Describe what a bootstrap analysis is. Why does it take longer to run a bootstrap analysis?
-2. Infer a RAxML phylogeny with 100 bootstraps on the server and on CIPRES. Compare the two phylogenies in Fig Tree. Is the topology the same, explain why or why not? Is the bootstrap support the same, explain why or why not? 
-3. Infer a MrBayes Phylogeny on the server and on CIPRES. Except set the CIPRES MrBayes run for 500000 generation (i.e., 10x more than the one we ran in the example). Make sure to change the cpu hours from .25 to 1 on CIPRES. Compare the two phylogenies in Fig Tree. E Is the topology the same, explain why or why not? Is the posterior probability the same, explain why or why not? 
+2. For question 2 and 3, what species did you use to root your phylogeny? If you are unsure read the Important note above. 
+3. Infer a RAxML phylogeny with 2 bootstrap replicates on the server and 100 bootstrap replicate CIPRES. Specify 168 hours instead of .5, (see the section, "Running RAxML on CIPRES" for a refresher on how to do this.) Compare the two phylogenies in Fig Tree. Is the topology the same, explain why or why not? Is the bootstrap support the same, explain why or why not? 
+4. Infer a MrBayes Phylogeny with 500 MCMC generations on the server and on 50000 Specify 168 hours instead of .5, (see the section, "Running RAxML on CIPRES" for a refresher on how to do this.) Compare the two phylogenies in Fig Tree. Is the topology the same, explain why or why not? Is the posterior probability the same, explain why or why not? 
 
 
 # About This Document
